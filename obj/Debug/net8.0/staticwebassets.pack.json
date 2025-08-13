@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\onixl\\Documents\\Projects\\Personal Projects\\dotNet Url shortener\\UrlShortener\\wwwroot\\app.js",
+      "PackagePath": "staticwebassets\\app.js"
+    },
+    {
+      "Id": "C:\\Users\\onixl\\Documents\\Projects\\Personal Projects\\dotNet Url shortener\\UrlShortener\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\onixl\\Documents\\Projects\\Personal Projects\\dotNet Url shortener\\UrlShortener\\wwwroot\\styles.css",
+      "PackagePath": "staticwebassets\\styles.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.UrlShortener.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.UrlShortener.props",
+      "PackagePath": "build\\UrlShortener.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.UrlShortener.props",
+      "PackagePath": "buildMultiTargeting\\UrlShortener.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.UrlShortener.props",
+      "PackagePath": "buildTransitive\\UrlShortener.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

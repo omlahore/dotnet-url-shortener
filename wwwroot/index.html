@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>URL Shortener</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">US</div>
+        <div class="titles">
+          <h1>URL Shortener</h1>
+          <p class="subtitle">Shorten long links, make them easy to share.</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="card">
+        <h2>Create a short link</h2>
+        <form id="shortenForm" class="form" novalidate>
+          <div class="field">
+            <label for="url">Long URL</label>
+            <input id="url" type="url" placeholder="https://example.com/very/long/link" required />
+            <small class="hint">Only http or https URLs are allowed.</small>
+          </div>
+
+          <div class="field two">
+            <div>
+              <label for="code">Custom code (optional)</label>
+              <input id="code" type="text" placeholder="my-link" pattern="[A-Za-z0-9_-]{4,20}" />
+            </div>
+            <button type="submit" class="btn primary">
+              <span class="btn-label">Shorten</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+        </form>
+
+        <div id="result" class="result hidden">
+          <div class="result-row">
+            <div class="result-text">
+              <span class="pill success">New</span>
+              <a id="shortLink" href="#" target="_blank" rel="noopener">—</a>
+            </div>
+            <div class="result-actions">
+              <button class="btn ghost" id="copyBtn">Copy</button>
+              <button class="btn ghost" id="openBtn">Open</button>
+            </div>
+          </div>
+          <p class="muted" id="resultLong">—</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="list-header">
+          <h2>Your recent links</h2>
+          <button class="btn ghost" id="refreshBtn">Refresh</button>
+        </div>
+        <div id="list" class="list empty">
+          <div class="empty-state">
+            <div class="logo-sm">US</div>
+            <p>No links yet. Create your first short link above.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="muted">Local demo app • Data stored in <code>data.json</code></span>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
