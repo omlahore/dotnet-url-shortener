@@ -8,8 +8,12 @@ var app = builder.Build();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
-// ===== JSON persistence =====
-var dataFile = Path.Combine(app.Environment.ContentRootPath, "data.json");
+
+var dataDir = Environment.GetEnvironmentVariable("DATA_DIR")
+              ?? app.Environment.ContentRootPath;
+Directory.CreateDirectory(dataDir);
+var dataFile = Path.Combine(dataDir, "data.json");
+
 var saveLock = new object();
 
 // initialize store (load from file if exists)
